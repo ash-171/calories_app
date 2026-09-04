@@ -119,7 +119,7 @@ document.getElementById("loginBtn").addEventListener("click", () => {
   auth.signInWithEmailAndPassword(email, pw).catch((e) => {
     const errEl = document.getElementById("signinError");
     if (e.code === "auth/invalid-credential" || e.code === "auth/user-not-found" || e.code === "auth/wrong-password") {
-      errEl.innerHTML = `<div class="banner warn">⚠ No account found with that email/password. Please create an account on the right →</div>`;
+      errEl.innerHTML = `<div class="banner warn">⚠ Check the email/password. If no account then please sign up →</div>`;
       document.getElementById("signinPassword").value = "";
     } else {
       errEl.textContent = e.message;
